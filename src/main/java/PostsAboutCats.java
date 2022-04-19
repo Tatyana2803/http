@@ -6,9 +6,9 @@ public class PostsAboutCats {
     private String text;
     private String type;
     private String user;
-    private String upvotes;
+    private Integer upvotes;
 
-    public PostsAboutCats(@JsonProperty("id") String id, @JsonProperty("text") String text, @JsonProperty("type") String type, @JsonProperty("user") String user, @JsonProperty("upvotes") String upvotes) {
+    public PostsAboutCats(@JsonProperty("id") String id, @JsonProperty("text") String text, @JsonProperty("type") String type, @JsonProperty("user") String user, @JsonProperty("upvotes") Integer upvotes) {
         this.id = id;
         this.text = text;
         this.type = type;
@@ -27,7 +27,12 @@ public class PostsAboutCats {
                 '}';
     }
 
-    public String getUpvotes() {
+    public Integer getUpvotes() {
         return upvotes;
     }
+
+    //
+//    public int getUpvotes() {
+//        return upvotes;
+//    }
 }

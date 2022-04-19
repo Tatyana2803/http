@@ -31,8 +31,10 @@ public class Main {
                 });
 
         posts.stream()
-                .filter(value -> value.getUpvotes() != null && Integer.parseInt(value.getUpvotes()) > 0)
+                .filter(value -> value.getUpvotes() != null && value.getUpvotes() > 0)
                 .forEach(System.out::println);
+//                .filter(value -> value.getUpvotes() != null && value.getUpvotes() > 0)
+//                .forEach(System.out::println);
 
 
     }
